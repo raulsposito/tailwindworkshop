@@ -42,9 +42,55 @@ Crash Course for Developers
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+layout: image-right
+image: https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2465&q=80
+---
+
+<div>
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-base font-semibold tracking-wide uppercase">3 things</h2>
+      <p class="pt-3 text-4xl font-extrabold">To keep in mind</p>
+      <p class="max-w-xl pt-6 mx-auto text-xl text-gray-400">when learning anything new.</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: image-left
+image: https://images.pexels.com/photos/2346289/pexels-photo-2346289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+class: 'text-white'
+---
+
+# Don't compare yourself to others
+
+<br>
+
+<!-- <ul>
+  <li>We are all different and here for different things</li>
+  <li>We're all good at different things</li>
+  <li>We all learn different things at different paces</li>
+</ul> -->
+
+---
+layout: image-left
+image: https://images.pexels.com/photos/3791136/pexels-photo-3791136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+class: 'text-white'
+---
+
+# If you're tired of starting over stop giving up 
+
+---
+layout: image-left
+image: https://images.pexels.com/photos/7210670/pexels-photo-7210670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+class: 'text-white'
+---
+
+# The obstacle is the way
+
+<br>
+
 ---
 layout: image-right
 image: https://cdn.dribbble.com/users/25514/screenshots/15344343/media/1c5c9f6ce8f9817ca1740cc44a1df199.png?compress=1&resize=400x300
@@ -369,6 +415,27 @@ For example, to apply the bg-sky-700 class on hover, use the hover:bg-sky-700 cl
 
 [Learn More](https://tailwindcss.com/docs/hover-focus-and-other-states#hover-focus-and-active)
 
+---
+
+# You can also create your own utility classes!
+
+One of the best parts of using Tailwind is defining your own utility functions.
+
+I recently needed a negative z-index, but Tailwind doesn't have one, so I created my own:
+
+```javascript
+@layer utilities {
+  .-z-1 {
+    z-index: -1;
+  }
+}
+```
+
+Anything wrapped with @layer utilities { ... } will be picked by Tailwind as a utility class.
+
+This lets you write `md:-z-1 lg:z-0` and have the utility class respond to screen size.
+
+### It's super simple!
 
 ---
 layout: center
